@@ -1,0 +1,21 @@
+.example-container {
+    height: 100vh; /* Full height */
+  }
+  
+  mat-sidenav {
+    width: 250px; /* Width of the sidenav */
+  }
+  
+  mat-toolbar {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+  }
+  
+  .spacer {
+    flex: 1 1 auto; /* Pushes content to the right */
+  }
+  
+  .content {
+    padding: 16px;
+  }
