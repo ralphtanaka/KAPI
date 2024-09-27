@@ -1,0 +1,47 @@
+.sidenav-container {
+    height: 100%;
+  }
+  
+  .sidebar-content {
+    width: 300px;
+    padding: 16px;
+  }
+  
+  .sidebar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+  }
+  
+  .mat-expansion-panel {
+    box-shadow: none;
+    border-radius: 0;
+    margin-bottom: 8px;
+  }
+  
+  .mat-expansion-panel-header {
+    padding: 0 16px;
+  }
+  
+  .price-range, .size-range {
+    margin-top: 8px;
+    text-align: center;
+  }
+  
+  .mat-button-toggle-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 16px;
+  }
+  
+  .mat-button-toggle {
+    flex: 1 0 auto;
+  }
+  
+  .sidebar-actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 16px;
+  }

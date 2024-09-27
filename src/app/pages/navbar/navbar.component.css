@@ -4,10 +4,10 @@
 
   .icon-button {
     display: flex;
-    align-items: center; /* Align icon and text vertically */
+    align-items: center; 
   }
   
   .icon-svg {
-    margin-right: 8px; /* Add space between icon and text */
-    vertical-align: middle; /* Ensure vertical alignment */
+    margin-right: 8px; 
+    vertical-align: middle; 
   }

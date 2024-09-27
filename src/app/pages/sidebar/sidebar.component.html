@@ -1,1 +1,99 @@
-<p>sidebar works!</p>
+<mat-sidenav-container class="sidenav-container">
+    <mat-sidenav mode="side" opened>
+      <div class="sidebar-content">
+        <div class="sidebar-header">
+          <h2>Filters</h2>
+          <button mat-icon-button>
+            <mat-icon>close</mat-icon>
+          </button>
+        </div>
+  
+        <mat-accordion>
+          <mat-expansion-panel>
+            <mat-expansion-panel-header>
+              <mat-panel-title>Property type</mat-panel-title>
+            </mat-expansion-panel-header>
+            <mat-selection-list [(ngModel)]="selectedPropertyTypes">
+              <mat-list-option *ngFor="let type of propertyTypes" [value]="type">
+                {{type}}
+              </mat-list-option>
+            </mat-selection-list>
+          </mat-expansion-panel>
+  
+          <mat-expansion-panel>
+            <mat-expansion-panel-header>
+              <mat-panel-title>Rental type</mat-panel-title>
+            </mat-expansion-panel-header>
+            <mat-selection-list [(ngModel)]="selectedRentalTypes">
+              <mat-list-option *ngFor="let type of rentalTypes" [value]="type">
+                {{type}}
+              </mat-list-option>
+            </mat-selection-list>
+          </mat-expansion-panel>
+  
+          <mat-expansion-panel>
+            <mat-expansion-panel-header>
+              <mat-panel-title>Price range</mat-panel-title>
+            </mat-expansion-panel-header>
+            <mat-slider min="0" max="500000" step="1000">
+              <input matSliderStartThumb [(ngModel)]="priceRange.min">
+              <input matSliderEndThumb [(ngModel)]="priceRange.max">
+            </mat-slider>
+            <div class="price-range">
+              ${{priceRange.min | number}} - ${{priceRange.max | number}}
+            </div>
+          </mat-expansion-panel>
+  
+          <mat-expansion-panel>
+            <mat-expansion-panel-header>
+              <mat-panel-title>Property size range</mat-panel-title>
+            </mat-expansion-panel-header>
+            <mat-slider min="50" max="200" step="1">
+              <input matSliderStartThumb [(ngModel)]="propertySize.min">
+              <input matSliderEndThumb [(ngModel)]="propertySize.max">
+            </mat-slider>
+            <div class="size-range">
+              {{propertySize.min}}sq m - {{propertySize.max}}sq m
+            </div>
+          </mat-expansion-panel>
+  
+          <mat-expansion-panel>
+            <mat-expansion-panel-header>
+              <mat-panel-title>Property room</mat-panel-title>
+            </mat-expansion-panel-header>
+            <div>
+              <p>Bedrooms</p>
+              <mat-button-toggle-group [(ngModel)]="selectedBedrooms">
+                <mat-button-toggle *ngFor="let num of bedrooms" [value]="num">{{num}}</mat-button-toggle>
+                <mat-button-toggle value="4+">4+</mat-button-toggle>
+              </mat-button-toggle-group>
+            </div>
+            <div>
+              <p>Bathrooms</p>
+              <mat-button-toggle-group [(ngModel)]="selectedBathrooms">
+                <mat-button-toggle *ngFor="let num of bathrooms" [value]="num">{{num}}</mat-button-toggle>
+                <mat-button-toggle value="4+">4+</mat-button-toggle>
+              </mat-button-toggle-group>
+            </div>
+          </mat-expansion-panel>
+  
+          <mat-expansion-panel>
+            <mat-expansion-panel-header>
+              <mat-panel-title>Select cities</mat-panel-title>
+            </mat-expansion-panel-header>
+            <mat-selection-list [(ngModel)]="selectedCities">
+              <mat-list-option *ngFor="let city of cities" [value]="city">
+                {{city}}
+              </mat-list-option>
+            </mat-selection-list>
+          </mat-expansion-panel>
+        </mat-accordion>
+  
+        <div class="sidebar-actions">
+          <button mat-raised-button color="primary" (click)="applyFilters()">Apply</button>
+          <button mat-button (click)="resetFilters()">Reset</button>
+        </div>
+      </div>
+    </mat-sidenav>
+  </mat-sidenav-container>
+  
