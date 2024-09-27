@@ -1,15 +1,134 @@
+.main-container {
+    display: grid;
+    padding-bottom: 100px;
+    grid-template-columns: 320px 1fr; 
+    height: 100vh; 
+    overflow: hidden;
+  }
+
+.sidenav-container {
+    height: 100vh;
+  }
+  
+  .sidebar-content {
+    width: 300px;
+    padding: 16px;
+  }
+  
+  .sidebar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+  }
+  
+  .mat-expansion-panel {
+    box-shadow: none;
+    border-radius: 0;
+    margin-bottom: 8px;
+  }
+  
+  .mat-expansion-panel-header {
+    padding: 0 16px;
+  }
+  
+  .price-range, .size-range {
+    margin-top: 8px;
+    text-align: center;
+  }
+  
+  .mat-button-toggle-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 16px;
+  }
+  
+  .mat-button-toggle {
+    flex: 1 0 auto;
+  }
+  
+  .sidebar-actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 16px;
+  }
+
+.search-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 16px;
+  padding: 16px;
+  background-color: #fff;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.listing-type-toggle {
+  display: flex;
+  border-bottom: 1px solid #e0e0e0;
+  margin-right: 16px;
+
+  button {
+    padding: 8px 16px;
+    border-bottom: 2px solid transparent;
+    
+    &.active {
+      border-bottom-color: #1976d2;
+      color: #1976d2;
+    }
+  }
+}
+
+.search-input {
+  flex-grow: 1;
+  min-width: 200px;
+}
+
+mat-form-field {
+  width: 150px;
+}
+
+.results-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 16px;
+
+  span {
+    font-weight: bold;
+  }
+}
+
+@media (max-width: 768px) {
+  .search-container {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  mat-form-field {
+    width: 100%;
+  }
+}
+
 .card-container {
     display: grid;
-    grid-template-columns: repeat(4, 1fr); /* 4 cards per row */
-    grid-gap: 16px; /* Gap between cards */
-    margin: 20px;
+    grid-template-columns: repeat(4, minmax(300px, 1fr));
+    grid-gap: 0px;
+    margin: 16px;
+    padding: 16px;
+    height: 100%;
+    overflow-y: auto;
   }
   
   .property-card {
     border-radius: 16px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     position: relative;
-    width: 75%; /* Reduce the card size to 75% of the original */
+    width: 75%;
+    display: flex;
+    flex-direction: column;
   }
   
   .property-labels {
@@ -22,8 +141,8 @@
   }
   
   .property-type {
-    background-color: #e0f7fa;
-    color: #00796b;
+    background-color: #ffffff;
+    color: #000000;
     padding: 4px 8px;
     border-radius: 8px;
     font-size: 12px;
@@ -31,8 +150,8 @@
   }
   
   .availability {
-    background-color: #fce4ec;
-    color: #d81b60;
+    background-color: #fffbfc;
+    color: #000000;
     padding: 4px 8px;
     border-radius: 8px;
     font-size: 12px;
@@ -40,10 +159,11 @@
   
   .favorite-button {
     position: absolute;
-    top: 16px;
-    right: 16px;
-    color: #ff4081;
-    z-index: 1; /* Ensure it stays on top of other elements */
+    top: 0;
+    right: 0;
+    padding: 10px;
+    color: #796d71;
+    z-index: 1;
   }
   
   .property-card img {
@@ -68,22 +188,64 @@
     font-size: 24px;
   }
   
-  /* Responsive behavior for medium and small screens */
   @media (max-width: 1200px) {
     .card-container {
-      grid-template-columns: repeat(3, 1fr); /* 3 cards per row on medium screens */
+      grid-template-columns: repeat(2, 1fr);
     }
   }
   
   @media (max-width: 900px) {
+    .main-container {
+      grid-template-columns: 1fr; 
+    }
+  
+    .sidenav-container {
+      display: none; 
+    }
+  
     .card-container {
-      grid-template-columns: repeat(2, 1fr); /* 2 cards per row on small screens */
+      grid-template-columns: 1fr; 
     }
   }
   
   @media (max-width: 600px) {
     .card-container {
-      grid-template-columns: 1fr; /* 1 card per row on very small screens */
+      grid-template-columns: 1fr; 
     }
   }
   
+  .subscription-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  h2 {
+    margin-bottom: 20px;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  mat-form-field {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  
+  button {
+    width: 200px;
+  }
+  
+  .subscription-form {
+    display: flex;
+    align-items: center; 
+  }
+  
+  .email-input {
+    flex: 1;
+    margin-right: 10px;
+  }

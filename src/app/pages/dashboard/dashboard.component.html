@@ -1,18 +1,95 @@
+<div class="main-container">
+<mat-sidenav-container class="sidenav-container">
+    <mat-sidenav mode="side" opened>
+      <div class="sidebar-content">
+        <div class="sidebar-header">
+          <h2 style="font-size: medium;">Filters</h2>
+          <button mat-icon-button>
+            <mat-icon>close</mat-icon>
+          </button>
+        </div>
+  
+        <mat-accordion>
+            <mat-panel-title>Property type</mat-panel-title>
+            <mat-selection-list [(ngModel)]="selectedPropertyTypes">
+              <mat-list-option *ngFor="let type of propertyTypes" [value]="type">
+                {{type}}
+              </mat-list-option>
+            </mat-selection-list>
+  
+            <mat-panel-title>Rental type</mat-panel-title>
+            <mat-selection-list [(ngModel)]="selectedRentalTypes">
+              <mat-list-option *ngFor="let type of rentalTypes" [value]="type">
+                {{type}}
+              </mat-list-option>
+            </mat-selection-list>
+  
+            <mat-panel-title>Price range</mat-panel-title>
+            <mat-slider min="0" max="500000" step="1000">
+              <input matSliderStartThumb [(ngModel)]="priceRange.min">
+              <input matSliderEndThumb [(ngModel)]="priceRange.max">
+            </mat-slider>
+            <div class="price-range">
+              ${{priceRange.min | number}} - ${{priceRange.max | number}}
+            </div>
+  
+            <mat-panel-title>Property size range</mat-panel-title>
+            <mat-slider min="50" max="200" step="1">
+              <input matSliderStartThumb [(ngModel)]="propertySize.min">
+              <input matSliderEndThumb [(ngModel)]="propertySize.max">
+            </mat-slider>
+            <div class="size-range">
+              {{propertySize.min}}sq m - {{propertySize.max}}sq m
+            </div>
+  
+            <mat-panel-title>Property room</mat-panel-title>
+            <div>
+              <p>Bedrooms</p>
+              <mat-button-toggle-group [(ngModel)]="selectedBedrooms">
+                <mat-button-toggle *ngFor="let num of bedrooms" [value]="num">{{num}}</mat-button-toggle>
+                <mat-button-toggle value="4+">4+</mat-button-toggle>
+              </mat-button-toggle-group>
+            </div>
+            <div>
+              <p>Bathrooms</p>
+              <mat-button-toggle-group [(ngModel)]="selectedBathrooms">
+                <mat-button-toggle *ngFor="let num of bathrooms" [value]="num">{{num}}</mat-button-toggle>
+                <mat-button-toggle value="4+">4+</mat-button-toggle>
+              </mat-button-toggle-group>
+            </div>
+  
+            <mat-panel-title>Select cities</mat-panel-title>
+            <mat-selection-list [(ngModel)]="selectedCities">
+              <mat-list-option *ngFor="let city of cities" [value]="city">
+                {{city}}
+              </mat-list-option>
+            </mat-selection-list>
+        </mat-accordion>
+  
+        <div class="sidebar-actions">
+          <button mat-raised-button color="primary" (click)="applyFilters()">Apply</button>
+          <button mat-button (click)="resetFilters()">Reset</button>
+        </div>
+      </div>
+    </mat-sidenav>
+    
+  </mat-sidenav-container>
+  
+  
 <div class="card-container">
+  
+    
     <mat-card class="property-card" *ngFor="let property of properties">
-      <!-- Top labels (Villa, Available) -->
       <div class="property-labels">
         <span class="property-type">{{ property.type }}</span>
         <span class="availability">Available | {{ property.available }}</span>
-        <button mat-icon-button class="favorite-button">
-          <mat-icon>favorite_border</mat-icon>
-        </button>
+
       </div>
-  
-      <!-- Property image -->
+      <button mat-icon-button class="favorite-button">
+        <mat-icon>favorite_border</mat-icon>
+      </button>
       <img mat-card-image [src]="property.image" alt="Property image">
   
-      <!-- Property details -->
       <mat-card-content>
         <p>{{ property.location }}</p>
         <p><strong>Asking price</strong></p>
@@ -36,5 +113,20 @@
         </div>
       </mat-card-content>
     </mat-card>
+    
   </div>
-  
+
+
+<div class="">
+<div class="subscription-container">
+  <h2>Send me exclusive offers, property updates and personalized tips for buying and renting property</h2>
+  <form [formGroup]="subscriptionForm" (ngSubmit)="onSubmit()" class="form-container subscription-form">
+    <mat-form-field appearance="outline" class="email-input">
+      <input matInput placeholder="Enter your email" formControlName="email">
+      <mat-error *ngIf="subscriptionForm.get('email')?.hasError('required')">Email is required</mat-error>
+      <mat-error *ngIf="subscriptionForm.get('email')?.hasError('email')">Please enter a valid email</mat-error>
+    </mat-form-field>
+    <button mat-raised-button color="primary" type="submit" [disabled]="subscriptionForm.invalid">Subscribe</button>
+  </form>
+</div>
+</div>  
