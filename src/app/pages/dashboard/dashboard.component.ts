@@ -25,11 +25,12 @@ import { MatFormFieldControl } from '@angular/material/form-field';
 import { NgModule } from '@angular/core';
 import { MatInputModule } from '@angular/material/input';
 import { ReactiveFormsModule, FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { MatTabsModule } from '@angular/material/tabs';
 
 @Component({
   selector: 'app-dashboard',
   standalone: true,
-  imports:  [ ReactiveFormsModule, MatInputModule, MatIcon, MatIconModule, FlexLayoutModule, CommonModule, MatCardModule, MatSidenavModule, MatAccordion, MatExpansionModule, MatExpansionPanel, MatSliderModule, MatSelectModule, MatButtonModule, MatListModule, MatExpansionPanelDescription, MatExpansionPanelHeader, MatExpansionPanelTitle, MatExpansionPanelActionRow, MatExpansionPanelContent, MatButtonToggleModule, FormsModule, MatFormField, MatOption, MatFormFieldModule], 
+  imports:  [ MatTabsModule, ReactiveFormsModule, MatInputModule, MatIcon, MatIconModule, FlexLayoutModule, CommonModule, MatCardModule, MatSidenavModule, MatAccordion, MatExpansionModule, MatExpansionPanel, MatSliderModule, MatSelectModule, MatButtonModule, MatListModule, MatExpansionPanelDescription, MatExpansionPanelHeader, MatExpansionPanelTitle, MatExpansionPanelActionRow, MatExpansionPanelContent, MatButtonToggleModule, FormsModule, MatFormField, MatOption, MatFormFieldModule], 
   templateUrl: './dashboard.component.html',
   styleUrl: './dashboard.component.css'
 })
