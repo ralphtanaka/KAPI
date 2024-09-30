@@ -60,7 +60,7 @@
     grid-template-columns: repeat(4, minmax(300px, 1fr));
     grid-gap: 16px;
     padding: 16px;
-    overflow-y: auto; /* Allows scrolling for cards */
+    overflow-y: auto; 
 }
   
   .property-card {
@@ -185,7 +185,7 @@
   }
   
   .subscribe-button {
-    height: 56px; /* Aligns with input field */
+    height: 56px; 
     background-color: black;
     color: white;
     border-radius: 50px;
@@ -197,7 +197,7 @@
   }
   
   mat-form-field.mat-form-field-appearance-outline .mat-form-field-outline {
-    border-color: transparent; /* Removes default border */
+    border-color: transparent; 
   }
   
   mat-form-field.mat-form-field-appearance-outline .mat-form-field-outline-start, 
@@ -214,12 +214,10 @@
   }
 
   .search-container {
-    /* padding: 20px; */
     display: flex;
     justify-content: center;
     margin-bottom: 16px
-    /* padding: 10px; */
-    /* margin-left: 240px; */
+
   }
   
   mat-tab-group {
@@ -263,4 +261,26 @@
     padding: 16px;
     height: 100vh;
     overflow: hidden;
+}
+
+@media (max-width: 1200px) {
+  .card-container {
+      grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 900px) {
+  .sidenav-container {
+      display: none;
+  }
+
+  .card-container {
+      grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .card-container {
+      grid-template-columns: 1fr;
+  }
 }

@@ -11,3 +11,19 @@
     margin-right: 8px; 
     vertical-align: middle; 
   }
+  @media (max-width: 768px) {
+    mat-toolbar {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .icon-button {
+      justify-content: space-between;
+      width: 100%;
+      padding: 8px 0;
+    }
+  
+    .icon-svg {
+      margin-right: 16px;
+    }
+  }
