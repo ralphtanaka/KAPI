@@ -41,7 +41,7 @@ export class DashboardComponent {
       type: 'Villa',
       available: 12,
       location: 'Zanzibar, Villa',
-      price: 'TZS 678000000.57',
+      price: 'TZS 50200 per month',
       image: 'https://cdn.pixabay.com/photo/2015/07/08/10/29/appartment-building-835817_960_720.jpg',
       amenities: {
         bedrooms: 3,
@@ -52,7 +52,7 @@ export class DashboardComponent {
       type: 'Villa',
       available: 12,
       location: 'Zanzibar, Villa',
-      price: 'TZS 678000000.57',
+      price: 'TZS 70200 per month',
       image: 'https://cdn.pixabay.com/photo/2021/12/20/09/20/apartment-6882571_1280.jpg',
       amenities: {
         bedrooms: 3,
@@ -63,7 +63,7 @@ export class DashboardComponent {
       type: 'Villa',
       available: 12,
       location: 'Zanzibar, Villa',
-      price: 'TZS 678000000.57',
+      price: 'TZS 670000',
       image: 'https://cdn.pixabay.com/photo/2016/11/28/11/52/concrete-1864808_960_720.jpg',
       amenities: {
         bedrooms: 3,
@@ -74,7 +74,7 @@ export class DashboardComponent {
       type: 'Villa',
       available: 12,
       location: 'Zanzibar, Villa',
-      price: 'TZS 678000000.57',
+      price: 'TZS 690000',
       image: 'https://cdn.pixabay.com/photo/2024/01/16/21/25/copenhagen-8513129_1280.jpg',
       amenities: {
         bedrooms: 3,
@@ -85,7 +85,7 @@ export class DashboardComponent {
       type: 'Villa',
       available: 12,
       location: 'Zanzibar, Villa',
-      price: 'TZS 678000000.57',
+      price: 'TZS 75500 per month',
       image: 'https://cdn.pixabay.com/photo/2016/04/18/14/53/image-1336613_960_720.jpg',
       amenities: {
         bedrooms: 3,
@@ -96,7 +96,7 @@ export class DashboardComponent {
       type: 'Villa',
       available: 12,
       location: 'Zanzibar, Villa',
-      price: 'TZS 678000000.57',
+      price: 'TZS 90200000.57',
       image: 'https://cdn.pixabay.com/photo/2022/07/10/19/30/house-7313645_1280.jpg',
       amenities: {
         bedrooms: 3,
@@ -107,7 +107,7 @@ export class DashboardComponent {
       type: 'Villa',
       available: 12,
       location: 'Zanzibar, Villa',
-      price: 'TZS 678000000.57',
+      price: 'TZS 67800000.57',
       image: 'https://cdn.pixabay.com/photo/2020/03/21/20/03/real-estate-4955087_960_720.jpg',
       amenities: {
         bedrooms: 3,
@@ -118,7 +118,7 @@ export class DashboardComponent {
       type: 'Villa',
       available: 12,
       location: 'Zanzibar, Villa',
-      price: 'TZS 678000000.57',
+      price: 'TZS 50200 per month',
       image: 'https://cdn.pixabay.com/photo/2013/09/25/17/35/holiday-house-186366_960_720.jpg',
       amenities: {
         bedrooms: 3,
@@ -130,7 +130,7 @@ export class DashboardComponent {
       type: 'Villa',
       available: 12,
       location: 'Zanzibar, Villa',
-      price: 'TZS 678000000.57',
+      price: 'TZS 50200 per month',
       image: 'https://cdn.pixabay.com/photo/2015/09/25/23/30/pool-958429_960_720.jpg',
       amenities: {
         bedrooms: 3,
@@ -141,7 +141,7 @@ export class DashboardComponent {
       type: 'Villa',
       available: 12,
       location: 'Zanzibar, Villa',
-      price: 'TZS 678000000.57',
+      price: 'TZS 50200 per month',
       image: 'https://cdn.pixabay.com/photo/2022/10/23/02/26/hotel-7540353_960_720.jpg',
       amenities: {
         bedrooms: 3,
@@ -152,7 +152,7 @@ export class DashboardComponent {
       type: 'Villa',
       available: 12,
       location: 'Zanzibar, Villa',
-      price: 'TZS 678000000.57',
+      price: 'TZS 50200 per month',
       image: 'https://cdn.pixabay.com/photo/2023/09/18/13/46/building-8260627_1280.jpg',
       amenities: {
         bedrooms: 3,
@@ -163,7 +163,7 @@ export class DashboardComponent {
       type: 'Villa',
       available: 12,
       location: 'Zanzibar, Villa',
-      price: 'TZS 678000000.57',
+      price: 'TZS 50200 per month',
       image: 'https://cdn.pixabay.com/photo/2016/04/18/14/54/court-1336617_1280.jpg',
       amenities: {
         bedrooms: 3,
@@ -174,7 +174,7 @@ export class DashboardComponent {
       type: 'Villa',
       available: 12,
       location: 'Zanzibar, Villa',
-      price: 'TZS 678000000.57',
+      price: 'TZS 50200 per month',
       image: 'https://cdn.pixabay.com/photo/2016/04/18/14/57/image-1336620_960_720.jpg',
       amenities: {
         bedrooms: 3,
@@ -185,7 +185,7 @@ export class DashboardComponent {
       type: 'Villa',
       available: 12,
       location: 'Zanzibar, Villa',
-      price: 'TZS 678000000.57',
+      price: 'TZS 50200 per month',
       image: 'https://cdn.pixabay.com/photo/2016/04/18/14/52/buildings-1336611_1280.jpg',
       amenities: {
         bedrooms: 3,
@@ -196,7 +196,7 @@ export class DashboardComponent {
       type: 'Villa',
       available: 12,
       location: 'Zanzibar, Villa',
-      price: 'TZS 678000000.57',
+      price: 'TZS 50200 per month',
       image: 'https://cdn.pixabay.com/photo/2016/07/15/21/18/bulgaria-1520423_960_720.jpg',
       amenities: {
         bedrooms: 3,
@@ -207,7 +207,7 @@ export class DashboardComponent {
       type: 'Villa',
       available: 12,
       location: 'Zanzibar, Villa',
-      price: 'TZS 678000000.57',
+      price: 'TZS 50200 per month',
       image: 'https://cdn.pixabay.com/photo/2017/02/21/11/55/relax-2085676_960_720.jpg',
       amenities: {
         bedrooms: 3,
@@ -216,6 +216,8 @@ export class DashboardComponent {
       }
     },
   ];
+
+  
 
   propertyTypes = ['Industrial', 'Residential', 'Commercial', 'Land'];
   rentalTypes = ['Houses', 'Condos', 'Apartments', 'Duplex', 'Vacation homes', 'Town house', 'Villas'];
@@ -266,9 +268,23 @@ export class DashboardComponent {
     console.log('Searching for:', this.searchQuery);
   }
 
+  isDescending: boolean = true;
+
   sortByRelevance() {
-    console.log('Sorting by relevance');
+    this.properties.sort((a, b) => {
+      const priceA = parseFloat(a.price.replace(/[^\d.-]/g, ''));
+      const priceB = parseFloat(b.price.replace(/[^\d.-]/g, ''));
+
+      if (this.isDescending) {
+        return priceB - priceA;
+      } else {
+        return priceA - priceB;
+      }
+    });
+
+    this.isDescending = !this.isDescending;
   }
+
 
   subscriptionForm: FormGroup;
 

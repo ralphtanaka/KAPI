@@ -89,8 +89,8 @@
         <input matInput placeholder="Search location" />
       </mat-form-field>
   
-      <mat-form-field class="filter-input">
-        <mat-select placeholder="Price range">
+      <mat-form-field class="filter-input" style="border-radius: 30%;">
+        <mat-select placeholder="Price range" style="border-radius: 30%;">
           <mat-option *ngFor="let price of priceRanges" [value]="price">{{ price }}</mat-option>
         </mat-select>
       </mat-form-field>
@@ -107,7 +107,7 @@
         </mat-select>
       </mat-form-field>
   
-      <button mat-button class="sort-button">
+      <button mat-button class="sort-button" (click)="sortByRelevance()">
         <mat-icon>sort</mat-icon> Sort by relevance
       </button>
     </div>
@@ -132,11 +132,10 @@
   
       <mat-card-content>
         <p>{{ property.location }}</p>
-        <p><strong>Asking price</strong></p>
-        <h3>{{ property.price }}</h3>
+        <p style="padding-top: -50%;">Asking price</p>
+        <h4 style="font-size: medium;"><strong>{{ property.price }}</strong></h4>
         <p>{{ property.type }}</p>
   
-        <!-- Icons for amenities (bedrooms, bathrooms, etc.) -->
         <div class="property-amenities">
           <div class="amenity">
             <mat-icon>bed</mat-icon>
