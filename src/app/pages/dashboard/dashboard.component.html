@@ -74,8 +74,48 @@
     </mat-sidenav>
     
   </mat-sidenav-container>
+
+
+  <div class="content-container">
+  <div class="search-container">
+    <mat-tab-group>
+      <mat-tab label="For sale"></mat-tab>
+      <mat-tab label="For rent"></mat-tab>
+    </mat-tab-group>
   
+    <div class="search-bar">
+      <mat-form-field class="location-input">
+        <mat-icon matPrefix>search</mat-icon>
+        <input matInput placeholder="Search location" />
+      </mat-form-field>
   
+      <mat-form-field class="filter-input">
+        <mat-select placeholder="Price range">
+          <mat-option *ngFor="let price of priceRanges" [value]="price">{{ price }}</mat-option>
+        </mat-select>
+      </mat-form-field>
+  
+      <mat-form-field class="filter-input">
+        <mat-select placeholder="Property type">
+          <mat-option *ngFor="let type of propertyTypes" [value]="type">{{ type }}</mat-option>
+        </mat-select>
+      </mat-form-field>
+  
+      <mat-form-field class="filter-input">
+        <mat-select placeholder="Bedroom">
+          <mat-option *ngFor="let bedroom of bedrooms" [value]="bedroom">{{ bedroom }}</mat-option>
+        </mat-select>
+      </mat-form-field>
+  
+      <button mat-button class="sort-button">
+        <mat-icon>sort</mat-icon> Sort by relevance
+      </button>
+    </div>
+  
+    <p>4236 units available</p>
+  </div>
+  
+
 <div class="card-container">
   
     
@@ -114,19 +154,23 @@
       </mat-card-content>
     </mat-card>
     
+      <div class="subscription-container">
+        <h2>Send me exclusive offers, property updates and personalized tips for buying and renting property</h2>
+        <form [formGroup]="subscriptionForm" (ngSubmit)="onSubmit()" class="subscription-form">
+          <mat-form-field class="email-input" appearance="outline">
+            <input matInput placeholder="Enter your email" formControlName="email" aria-label="Email">
+            <mat-error *ngIf="subscriptionForm.get('email')?.hasError('required')">Email is required</mat-error>
+            <mat-error *ngIf="subscriptionForm.get('email')?.hasError('email')">Please enter a valid email</mat-error>
+          </mat-form-field>
+          <button mat-raised-button color="primary" class="subscribe-button" type="submit" [disabled]="subscriptionForm.invalid">
+            Subscribe
+            <mat-icon>arrow_forward</mat-icon>
+          </button>
+        </form>
+      </div>
+    </div>  
+
+
   </div>
 
-
-<div class="">
-<div class="subscription-container">
-  <h2>Send me exclusive offers, property updates and personalized tips for buying and renting property</h2>
-  <form [formGroup]="subscriptionForm" (ngSubmit)="onSubmit()" class="form-container subscription-form">
-    <mat-form-field appearance="outline" class="email-input">
-      <input matInput placeholder="Enter your email" formControlName="email">
-      <mat-error *ngIf="subscriptionForm.get('email')?.hasError('required')">Email is required</mat-error>
-      <mat-error *ngIf="subscriptionForm.get('email')?.hasError('email')">Please enter a valid email</mat-error>
-    </mat-form-field>
-    <button mat-raised-button color="primary" type="submit" [disabled]="subscriptionForm.invalid">Subscribe</button>
-  </form>
 </div>
-</div>  
